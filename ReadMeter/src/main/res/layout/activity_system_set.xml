@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center"
+        app:rowCount="4"
+        app:columnCount="3"
+        app:orientation="horizontal"
+        android:layout_gravity="top"
+        android:background="@drawable/blg"
+        android:layout_margin="1dp">
+
+
+        <LinearLayout
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:onClick="systemInfo"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/count"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="系统信息"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:onClick="btnUpdatePwd"
+            android:orientation="vertical"
+            android:background="@drawable/square_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="@drawable/user_home"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="修改密码"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:id="@+id/ll1_btn_user"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:onClick="btnUser"
+            android:orientation="vertical"
+            android:background="@drawable/square_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="@drawable/user_home"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="用户管理"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll1_btn_bind"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:onClick="clearData"
+            android:orientation="vertical" >
+
+            <!-- android:onClick="btnWifi" -->
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/ic_clean" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="清空数据"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:onClick="exPortReadMeter"
+            android:background="@drawable/square_line"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/ic_export"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="数据导出"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1_btn_connect"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:onClick="proofingTime"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="41dp"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/payment_records"
+                android:layout_weight="0.11" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="校对时间"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_btn_2"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_btn_bind_list"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll3_btn_1"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3_btn_2"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3_btn_3"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4_btn_1"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4_btn_2"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4_btn_3"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </android.support.v7.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

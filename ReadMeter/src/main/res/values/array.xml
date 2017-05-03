@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sector">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="block">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <integer-array name="taskResultCount">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+
+    <string-array name="planets_array">
+        <item>功能菜单</item>
+        <item>设置时间</item>
+        <item>设置价格</item>
+        <item>读表记录</item>
+        <item>购气记录</item>
+        <item>读表清零</item>
+        <item>关于我们</item>
+        <item>程序退出</item>
+        <!-- <item>Other</item> -->
+    </string-array>
+    
+    <string-array name="email_array">
+        <item>邮箱格式</item>
+        <item>\@qq.com</item>
+        <item>\@126.com</item>
+        <item>\@163.com</item>
+        <item>\@enn.cn</item>
+        <item>\@sina.com</item>
+        <item>\@gmail.com</item>
+        <item>\@sohu.com</item>
+        <item>\@yahoo.com.cn</item>
+        <item>\@sogou.com </item>
+        <item>\@56.com</item>
+        <item>其它格式</item>
+        <!-- <item></item> -->
+
+        <!-- <item>Other</item> -->
+    </string-array>
+    
+    <string-array name="salegas_sum">
+        <item>购气金额</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>其它金额</item>
+        <!-- <item></item> -->
+
+        <!-- <item>Other</item> -->
+    </string-array>
+    
+    <string-array name="rate_sum">
+         <item>300</item> 
+         <item>600</item> 
+         <item>1200</item> 
+         <item>2400</item> 
+         <item>4800</item> 
+         <item>9600</item>
+		<item>14400</item> 
+		<item>19200</item> 
+		<item>38.4k</item> 
+		<item>57600</item> 
+		<item>80K</item> 
+		<item>125K</item> 
+		<item>250K</item> 
+		<item>521K</item>
+		<item>768K</item> 
+		<item>1M</item> 
+		<item>1.5M</item> 
+		<item>2M</item> 
+		<item>其它</item> 
+		</string-array>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--gradient 渐变-->
+    <gradient
+        android:startColor="#ff8c00"
+        android:endColor="#6A6A6A"
+        android:angle="360" />
+    <!--angle 是角度-->
+    <!--stroke 边缘-->
+    <stroke
+        android:width="0.001dp"
+        android:color="#C7C7C7" />
+    <solid android:color="#0000" >
+    </solid>
+    <!--corners 拐角-->
+    <corners android:radius="0dp" >
+        <!--radius 半径-->
+    </corners>
+    <size android:height="2dp" />
+    <!--相对位置 填充-->
+    <padding android:left="0dp" />
+
+</shape>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:textColor">#ffffff</item>
+        <item name="android:editTextColor">#fff</item>-->
+        <item name="android:windowBackground">@drawable/state2</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ImageTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--<item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowNoTitle">true</item>-->
+    </style>
+
+    <style name="ColorTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--<item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowNoTitle">true</item>-->
+    </style>
+
+    <style name="ColorTranslucentTheme_item_top" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--<item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowNoTitle">true</item>-->
+    </style>
+
+    <style name="test1">
+        <item name="android:background">@android:color/transparent</item>
+    </style>zz
+</resources>

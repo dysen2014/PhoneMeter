@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+def buildSdkVersion = 24
+def buildToolVersion = "25.0.0"
+def supportVersion = "25.0.0"
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.dysen.qj.wMeter"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile files('libs/universal-image-loader-1.8.6-with-sources.jar')
+    compile 'com.android.support:appcompat-v7:' + supportVersion
+    compile 'com.android.support:design:' + supportVersion
+    compile 'com.android.support:support-v4:' + supportVersion
+    compile files('libs/guava-r09.jar')
+    compile 'com.github.shinelw:library:1.0.1'
+    //    compile 'com.jaeger.statusbaruitl:library:1.0.0'
+    //    compile 'com.daasuu:BubbleLayout:1.0.0'
+    //Gridlayout
+    compile 'com.android.support:gridlayout-v7:' + supportVersion
+    // uber 加载
+//    compile 'com.github.ishan1604:uberprogressview:v1.1.0'
+    //引用本地的库
+    compile project(':mylibrary')
+//        compile project(':UpdApp')
+    //MaterialDesignLibrary
+    //    compile files('libs/fastjson-1.1.43.android.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    //Emojix
+    /*compile 'com.github.nekocode:Emojix:{lastest-version}'*/
+    //    compile files('libs/okhttp-3.4.1.jar')
+    compile files('libs/afinal-0.3.3-bin.jar')
+    //facebook的图片加载框架fresco
+    //    compile(name: 'fresco-0.13.0', ext: 'aar')
+    compile 'com.android.support:multidex:1.0.0'
+    compile files('libs/jxl.jar')
+    compile 'com.lzy.net:okgo:2.0.0'
+}
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+        //本地仓库，用于引用aar文件
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}

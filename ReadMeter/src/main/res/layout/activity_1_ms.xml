@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@drawable/blg">
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/ll_middle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@drawable/blg"
+            android:gravity="center"
+            app:columnCount="3"
+            app:orientation="horizontal"
+            app:rowCount="4">
+
+
+            <LinearLayout
+                android:id="@+id/ll1_btn_3"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="meterList"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/book" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="表册"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1_btn_connect"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="dataUpdate"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/update" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="数据上传"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="btnFill"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <!-- android:onClick="btnWifi" -->
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/read_wmeter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="补抄"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll2_btn_1"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="btnNFC"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/nfc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="NFC 抄表"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="btnReadMLocation"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="抄表定位"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_btn_2"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="photoShow"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:background="@drawable/ic_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="抄表异常"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_btn_3"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="checkRM"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:background="@drawable/ic_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="稽查"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll4_btn_1"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:background="#00000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4_btn_2"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:background="#00000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4_btn_3"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:background="#00000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_btn_bind_list"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:onClick="btnBLE"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/img_wid"
+                    android:layout_height="@dimen/img_hei"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/ble1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="BLE"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

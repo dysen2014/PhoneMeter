@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center"
+        app:rowCount="4"
+        app:columnCount="3"
+        app:orientation="horizontal"
+        android:layout_gravity="top"
+        android:background="@drawable/blg"
+        android:layout_margin="1dp">
+
+
+        <LinearLayout
+            android:id="@+id/ll1_btn_3"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:onClick="btnUpdatePwd"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/user_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="修改密码"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1_btn_connect"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1_btn_bind"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <!-- android:onClick="btnWifi" -->
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll2_btn_1"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_btn_2"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2_btn_bind_list"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:layout_marginBottom="3dp"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll3_btn_1"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3_btn_2"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3_btn_3"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4_btn_1"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4_btn_2"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4_btn_3"
+            android:gravity="center"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:background="@drawable/square_line"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="@dimen/img_wid"
+                android:layout_height="@dimen/img_hei"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </android.support.v7.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

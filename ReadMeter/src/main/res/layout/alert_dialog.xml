@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+<LinearLayout 
+    android:id="@+id/pop_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+     android:background="@drawable/btn_style_alert_dialog_background">
+
+    <Button
+        android:id="@+id/btn_entry_ok"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="确认录入数据"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        android:visibility="gone"
+         />
+    <Button
+        android:id="@+id/btn_entry_localtion"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="抄表位置定位"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        />
+    <Button
+        android:id="@+id/btn_read_statist"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="抄表用量统计"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btn_usew_analysis"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="抄表用水分析"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btn_payment_history"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="查看缴费记录"
+         android:background="@drawable/btn_style_alert_dialog_button"
+         android:textStyle="bold"
+         />
+
+    <Button
+        android:id="@+id/btn_data_update"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="查看数据上传"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btn_read_photo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="查看抄表异常"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_read_anomaly"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="抄表异常拍照"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_sound_effect"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="控制音效播放"
+        android:background="@drawable/btn_style_alert_dialog_button"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="8dp"
+	   android:layout_marginBottom="15dip"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="取消"
+       android:background="@drawable/btn_style_alert_dialog_cancel"
+       android:textColor="#ffffff"
+       android:textStyle="bold"
+        />
+</LinearLayout>
+</RelativeLayout>

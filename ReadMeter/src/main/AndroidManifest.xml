@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dysen.qj.wMeter">
+
+    <!-- nfc -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <!-- BLE -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!--android 6.0系统新增动态授权机制，且要扫描到蓝牙需要额外添加一个权限-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Need ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION permission to get scan results -->
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.VIBRATE" ></uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS" >
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 震动器服务 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+    
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 打开相机 及相册 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_water_36dp"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait" >
+        <activity android:name="com.dysen.update.Test"/>
+        <activity android:name="com.dysen.load.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dysen.load.UserDemo" />
+        <activity android:name="com.dysen.login_register.LoginDemo" />
+        <activity android:name="com.dysen.login_register.ForgetPwdDemo" />
+        <activity android:name="com.dysen.login_register.RegisterDemo" />
+        <activity android:name="com.dysen.login_register.UpdatePwd" />
+        <activity android:name="com.dysen.type.about.AboutActivity" />
+        <activity android:name="com.dysen.type.about.AppIntroActivity" />
+        <activity android:name="com.dysen.type.about.CompanyIntroActivity" />
+        <activity android:name="com.dysen.type.user.UserActivity" />
+        <activity android:name="com.dysen.type.dataSys.DataSysActivity" />
+        <activity android:name="com.dysen.type.meterSys.MeterSysActivity" />
+        <activity android:name="com.dysen.type.meterSys.MListActivity" />
+        <activity android:name="com.dysen.type.meterSys.UserViewActivity" />
+        <activity android:name="com.dysen.type.dataSys.PaymentHistoryActivity" />
+        <activity android:name="com.dysen.type.meterSys.WaterEntryActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity android:name="com.dysen.type.meterSys.BookActivity" />
+        <activity android:name="com.dysen.type.meterSys.UpdateActivity" />
+        <activity android:name="com.dysen.load.MainActivity" />
+        <activity android:name="com.dysen.nfcdemo.NFCDemoActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+            <!-- ACTION_NDEF_DISCOVERED -->
+            <!-- TNF_WELL_KNOWN RTD_URI -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="cnblogs.com/skyseraph"
+                    android:pathPrefix="/"
+                    android:scheme="http://www." />
+            </intent-filter>
+            <!-- TNF_WELL_KNOWN RTD_TEXT -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <!-- TNF_BASOLUTE_URI -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="developer.android.com"
+                    android:pathPrefix="/index.html"
+                    android:scheme="http://" />
+            </intent-filter>
+            <!-- ACTION_TECH_DISCOVERED -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+            <!-- ACTION_TAG_DISCOVERED -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dysen.type.dataSys.StatisticsActivity" />
+        <activity android:name="com.dysen.type.meterSys.FillMeterActivity" />
+        <activity android:name="com.dysen.type.meterSys.SelectMIdActivity" />
+        <activity android:name="com.dysen.type.dataSys.UsewAnalysisActivity" />
+        <activity android:name="com.dysen.type.meterSys.PhotoShowActivity" />
+
+        <!-- BLE 蓝牙 activity -->
+        <activity
+            android:name="com.dysen.ble.DeviceScanActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name="com.dysen.ble.DeviceControlActivity" />
+
+        <!-- BLE 蓝牙 service -->
+        <service
+            android:name="com.dysen.ble.BluetoothLeService"
+            android:enabled="true" />
+
+        <activity android:name="com.dysen.ble.bleSys.BleSysActivity" />
+        <activity android:name="com.dysen.type.meterSys.systemSet.SystemSetActivity" />
+        <activity android:name="com.dysen.ble.BleReadMeterActivity" />
+        <activity android:name="com.dysen.ble.BleWirelessDebugActivity" />
+        <activity android:name="com.dysen.type.meterSys.systemSet.SysInfoActivity"/>
+        <activity android:name="com.dysen.ble.LoraReadMeterActivity"/>
+        <activity android:name="com.dysen.mylibrary.utils.zbarscan.ScanCodeUtils"/>
+        <activity android:name="com.dysen.dl_notification.UpdAppActivity"/>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        
+        <service android:name="com.dysen.dl_notification.DownLoadService"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+    </application>
+
+    <!--在SD卡中创建与删除文件权限-->
+
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"/>
+    <!--向SD卡写入数据的权限-->
+    <uses-permission android:name="androd.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--读取数据的权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>

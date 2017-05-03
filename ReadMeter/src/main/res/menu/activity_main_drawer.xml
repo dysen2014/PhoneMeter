@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/book"
+            android:title="电子表册" />
+        <item
+            android:id="@+id/nav_nfc"
+            android:icon="@drawable/nfc"
+            android:title="NFC 抄表" />
+        <item
+            android:id="@+id/nav_count_find"
+            android:icon="@drawable/count"
+            android:title="统计查询" />
+        <item
+            android:id="@+id/nav_update"
+            android:icon="@drawable/update"
+            android:title="数据上传" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/payment_records"
+            android:title="缴费记录" />
+
+        <item
+            android:id="@+id/nav_fillorleakage"
+            android:icon="@drawable/read_wmeter"
+            android:title="补抄漏抄" />
+    </group>
+
+    <item android:title="---------->">
+        <menu>
+            <item
+                android:id="@+id/nav_company_intro"
+                android:icon="@drawable/company_intro"
+                android:title="公司简介" />
+            <item
+                android:id="@+id/nav_app_intro"
+                android:icon="@drawable/about"
+                android:title="应用介绍" />
+        </menu>
+    </item>
+
+</menu>

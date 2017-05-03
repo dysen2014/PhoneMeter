@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/blg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="48dp" >
+
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:inputType="textCapCharacters"
+                android:paddingLeft="90dp"
+                android:singleLine="true"
+                android:textColorHint="@color/bisque"
+                android:digits="@string/login_name"
+                android:hint="你的账号,	数字 字母  下划线_和 . 组成"
+                android:textSize="@dimen/text_size_15"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/et_user_name"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="账号"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+            <!--android:text="+86"-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="48dp" >
+
+            <EditText
+                android:id="@+id/et_old_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:hint="你的原密码"
+                android:paddingLeft="90dp"
+                android:singleLine="true"
+                android:digits="@string/login_name"
+                android:textColorHint="@color/bisque"
+                android:textSize="16sp" />
+            <!--android:hint="你的手机号码"
+            android:inputType="phone"-->
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/et_old_pwd"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="原密码"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+            <!--android:text="+86"-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="48dp" >
+
+            <EditText
+                android:id="@+id/et_new_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="你的新密码"
+                android:paddingLeft="90dp"
+                android:singleLine="true"
+                android:digits="@string/login_name"
+                android:textColorHint="@color/bisque"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+            <!--android:hint="你的手机号码"
+            android:inputType="phone"-->
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/et_new_pwd"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="新密码"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+            <!--android:text="+86"-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="48dp" >
+
+            <EditText
+                android:id="@+id/et_confirm_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:hint="再次输入密码"
+                android:paddingLeft="90dp"
+                android:singleLine="true"
+                android:digits="@string/login_name"
+                android:textColorHint="@color/bisque"
+                android:textSize="16sp" />
+            <!--android:hint="你的手机号码"
+            android:inputType="phone"-->
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/et_confirm_pwd"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="确认密码"
+                android:textColor="#353535"
+                android:textSize="16sp" />
+            <!--android:text="+86"-->
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_update_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:background="@drawable/ddy"
+            android:text="提交"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

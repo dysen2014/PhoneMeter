@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.dysen.type.meterSys.MListActivity"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:background="@drawable/blg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/card_pic">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_height="48dp">
+
+                <EditText
+                    android:id="@+id/et_sys_read_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:hint="你的名称"
+                    android:numeric="integer"
+                    android:paddingLeft="120dp"
+                    android:singleLine="true"
+                    android:maxLength="8"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="16sp"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="48dp"
+                    android:layout_alignLeft="@id/et_meterId_mid"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="24dp"
+                    android:text="抄表员："
+                    android:textSize="16sp" />
+                <!--android:text="+86"-->
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_height="48dp">
+
+                <EditText
+                    android:id="@+id/et_sys_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:hint="你的总户数"
+                    android:numeric="integer"
+                    android:paddingLeft="120dp"
+                    android:singleLine="true"
+                    android:maxLength="8"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="16sp"
+                    android:focusable="false" />
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="48dp"
+                    android:layout_alignLeft="@id/et_meterId_mid"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="24dp"
+                    android:text="总户数："
+                    android:textSize="16sp" />
+                <!--android:text="+86"-->
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="48dp"
+                    android:layout_alignLeft="@id/et_meterId_mid"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="24dp"
+                    android:text="已抄："
+                    android:textSize="16sp"
+                    android:id="@+id/textView2" />
+
+                <EditText
+                    android:id="@+id/et_sys_readM"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:hint="你的已抄表"
+                    android:numeric="integer"
+                    android:paddingLeft="120dp"
+                    android:singleLine="true"
+                    android:maxLength="8"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="16sp"
+                    android:focusable="false"
+                    android:layout_alignBaseline="@+id/textView2"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_alignParentStart="true" />
+                <!--android:text="+86"-->
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_height="48dp">
+
+                <EditText
+                    android:id="@+id/et_sys_readM_percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:hint="你的抄表率"
+                    android:numeric="integer"
+                    android:paddingLeft="120dp"
+                    android:singleLine="true"
+                    android:maxLength="8"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="16sp"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="48dp"
+                    android:layout_alignLeft="@id/et_meterId_mid"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="24dp"
+                    android:text="抄表比例："
+                    android:textSize="16sp" />
+                <!--android:text="+86"-->
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nfc_key">2F5F23FEC22F</string>
+    <string name="icons">&#x3605; &#x3439; &#x35ae; &#x35af;</string>
+    <!--<string name="HTTP_IP">http://dysen.in.8866.org:13356/</string>-->
+    <!--<string name="HTTP_IP">http://60.10.134.67:5001/</string>-->
+    <!--<string name="HTTP_IP">http://192.168.1.11:11100/</string>-->
+
+    <!--<string name="HTTP_IP">http://192.168.0.102:8080/</string>-->
+    <string name="HTTP_IP">http://wx.qjzls.com/</string>
+    <!--<string name="HTTP_IP">http://duzhaohui.f3322.net:8889/</string>-->
+    <!--<string name="HTTP_IP">http://ic100.net:8080/</string>-->
+    <!--<string name="HTTP_IP">http://58.54.134.102:9021/</string>-->
+
+    <string name="update_download_failed">下载失败</string>
+    <string name="update_download_fail_msg">下载失败咯</string>
+    <string name="update_download_start">开始下载</string>
+    <string name="update_download_progressing">下载中</string>
+    <string name="update_download_finish">下载完成</string>
+    <string name="app_company_name">潜江</string>
+    <string name="app_function_name">抄表系统</string>
+    <string name="app_name">潜江抄表系统</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="allow">1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</string>
+    <string name="login_name">1234567890qwertyuiopasdfghjklzxcvbnm._QWERTYUIOPASDFGHJKLZXCVBNM</string>
+    <string name="email_name">1234567890qwertyuiopasdfghjklzxcvbnm._QWERTYUIOPASDFGHJKLZXCVBNM</string>
+    <string name="et_send">1234567890abcdef</string>
+    <string name="xa">\@	信控</string>
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="receive">接收区:</string>
+    <string name="receive_data">  无接收数据</string>
+    <string name="send">发送区:</string>
+    <string name="send_data">  无发送数据</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="conn_state">连接状态:</string>
+    <string name="connected">成功连接 </string>
+    <string name="disconnected">未成功连接设备 </string>
+    <string name="title_devices">正在扫描设备。。。</string>
+    <string name="error_bluetooth_not_supported">该机器不支持 BLE.</string>
+    <string name="unknown_device">设备</string>
+    <string name="unknown_characteristic">串口特征值</string>
+    <string name="unknown_service">基于自定义通信协议的蓝牙服务</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">连接</string>
+    <string name="menu_disconnect">断开</string>
+    <string name="menu_scan">扫描</string>
+    <string name="menu_stop">停止</string>
+    <string name="meter_id">开户表号：</string>
+    <string name="meter_id_hint">请输入开户表号</string>
+    <string name="account_name">开户姓名：</string>
+    <string name="account_name_hint">请输入开户姓名</string>
+    <string name="account_phone">开户手机：</string>
+    <string name="account_phone_hint">请输入开户手机</string>
+    <string name="account_submit">提交蓝牙表信息</string>
+    <string name="btn_join_debug">进入调试模式</string>
+    <string name="company_about">\t\t\t\t武汉信控科技有限公司 :http://www.whxc.net 主要从事电子产品研发公司，研发各种电子科技产品，计算机软件和硬件销售、电子元器件的销售。软件及网络集成系统，水利等工业工程等。如GPRS通讯产品，GSM/GPRS无线模块，无线远距离通讯产品，IC卡，自来水、煤气、电收费管理系统,智能语音MODEM服务器等。公司自主开发的产品主要有GPS/GPRS模块,GPRS远程监控,无线远距离通讯,智能语音MODEM服务器,IC卡、读卡器,自来水、煤气、电收费管理系统。
+\n公司地址：湖北省武汉市洪山区名都花园202栋一单元602室
+\n公司网站：http://www.whxc.net
+\n业务范围：计算机软硬件，电子产品，电子元器件，GPRS远程监控, 智能语音MODEM服务器,IC卡，读卡器,自来水、煤气、电收费管理系统，GPRS模块；
+\n邮编：430071
+</string>
+    <string name="company_tel">02787373101</string>
+    <string name="company_about2">传真：027-87373101
+\n联系QQ: 20073047,279809826,282750178</string>
+    <string name="enn_intro">        新奥能源（股票代码02688.HK，原新奥燃气）于1992年开始从事城市管道燃气业务，是国内规模最大的清洁能源分销商之一。
+      通过二十多年的经营实践，新奥能源成功构建了以天然气等清洁能源为主要产品，以城市民用、园区、公建、交通和工商业用户为终端客户，以城市燃气、园区能源、交通能源...</string>
+    <string name="enn_intro2">新奥能源（股票代码02688.HK，原新奥燃气）于1992年开始从事城市管道燃气业务，是国内规模最大的清洁能源分销商之一。
+ 
+通过二十多年的经营实践，新奥能源成功构建了以天然气等清洁能源为主要产品，以城市民用、园区、公建、交通和工商业用户为终端客户，以城市燃气、园区能源、交通能源和分布式能源为主要业务领域的能源分销体系，为客户量身定制清洁能源整体解决方案。
+ 
+公司根据用户多样性用能需求，运用互联网和泛能技术，打造快速精准高效的互联网能源运营平台，通过全面信息化、市场与战略绩效机制等管理手段，持续优化运营机制，不断提高卓越运营能力，为用户持续创造价值，努力成为受人尊敬的清洁能源服务商。
+ 
+目前，公司在全国16个省、直辖市、自治区成功运营140余个城市燃气项目，为1060多万居民用户和47600多家工商业用户提供城市燃气及各类清洁能源产品与服务，敷设管道超过27000公里，投资、运营527座天然气汽车加气站，中国大陆市场覆盖城区人口超过6537万。在越南河内、岘港、胡志明市经营城市燃气业务，在北美、欧洲从事交通清洁能源业务。公司拥有100多家全资、控股公司和分支机构，总资产超过430亿元人民币，员工27000多人。</string>
+    <string name="title_activity_activity_iot_func">ActivityIotFunc</string>
+    <string name="title_activity_activity_add_dev">ActivityAddDev</string>
+    <string name="title_activitydevlist_list">Items</string>
+    <string name="title_activitydevlist_detail">ActivityDevList Detail</string>
+    <string name="title_activity_activity_dev_list">ActivityDevList</string>
+    <string name="title_activity_activity_scan">ActivityScan</string>
+
+    <string name="select_dev">查找 添加</string>
+    <string name="scan_dev">扫码 添加</string>
+    <string name="title_activity_my_activity_func">MyActivityFunc</string>
+    <string name="dev_addr">设备位置</string>
+    <string name="dev_id">设备编号</string>
+    <string name="dev_icon">    设备图标</string>
+    <string name="title_activity_activity_socket">ActivitySocket</string>
+    <string name="title_activity_activity2_about">Activity2About</string>
+    <string name="title_activity_app_intro">AppIntroActivity</string>
+
+    <string name="tvApSsidTitle">名称:</string>
+    <string name="tvPasswordTitle">密码:</string>
+    <string name="switchIsSsidHiddenTitle">SSID is Hidden</string>
+    <string name="spinnerTaskResultCountTitle">Task result count</string>
+    <string name="btnConfirmTitle">配置</string>
+    <string name="serverIp">115.28.247.72</string>
+    <string name="serverPort">1200</string>
+    <string name="gateWayName"></string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="confirm">是</string>
+    <string name="cancel">稍后</string>
+
+    <string name="scanning">扫码中 。。。</string>
+    <string name="scan"></string>
+    <string name="login_txt">立即登录</string>
+
+</resources>

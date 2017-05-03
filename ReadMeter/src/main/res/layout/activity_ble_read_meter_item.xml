@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="表号"
+            android:ems="1"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/txt_ble_read_item1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:maxLines="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="读数"
+            android:ems="1"
+            android:layout_marginLeft="16dp"
+            />
+        <TextView
+            android:id="@+id/txt_ble_read_item2"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:text=""
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="日期"
+            android:ems="1"
+            android:layout_marginLeft="16dp"
+            />
+        <TextView
+            android:id="@+id/txt_ble_read_item3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text=""
+            android:layout_marginLeft="8dp"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

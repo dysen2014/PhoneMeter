@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/blueMeter"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/blg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_address"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/device_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/connection_state"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="fill_parent"
+            android:hint="蓝牙连接状态"
+            android:textColorHint="#8B6969"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:layout_alignParentLeft="true"/>
+
+            <Button
+                android:id="@+id/btn_search_ble"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#0000"
+                android:text="more"
+                android:textStyle="italic|bold"
+                android:layout_marginRight="10dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_rx"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#8B0000"
+            android:hint="Rx 00"
+            android:textColorHint="#ffffff"
+            android:textSize="16dp"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:layout_marginRight="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_tx"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#556B2F"
+            android:hint="Tx 00"
+            android:textColorHint="#ffffff"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:layout_marginLeft="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="接收区:"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:id="@+id/svR"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical|horizontal" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/receiveData"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="#ffffff"
+                    android:textSize="18dp" />
+            </HorizontalScrollView>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66ffccdd" />
+
+        <TextView
+            android:id="@+id/tvT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发送区:"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:id="@+id/svT"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical|horizontal" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/sendData"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp" />
+            </HorizontalScrollView>
+        </ScrollView>
+
+
+
+        <ListView
+            android:id="@+id/lv_ble_read"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            </ListView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="1dp"
+                    android:gravity="center_vertical"
+                    android:hint="网号"
+                    android:ems="1"
+                    android:textSize="16dp"
+                    android:textColor="#fff" />
+
+                <EditText
+                    android:id="@+id/et_net_id"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:text="1"
+                    android:singleLine="true"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:gravity="center_vertical"
+                android:hint="开始"
+                android:ems="1"
+                android:textSize="16dp"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/et_meter_id_start"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:numeric="integer"
+                android:text="1"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:textSize="16dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:gravity="center_vertical"
+                android:hint="结束"
+                android:ems="1"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:id="@+id/et_meter_id_end"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:numeric="integer"
+                android:text="1"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:textSize="16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="0.20"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="发送内容："
+                android:textSize="16dp"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/et_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:numeric="integer"
+                android:hint="68305F010008093516"
+                android:digits="1234567890ABCDEFabcdef"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_wakeup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="readWakeUp"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="4dp"
+                android:text="唤醒" />
+
+            <Button
+                android:id="@+id/btn_read_meter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="readMeter"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="单抄"/>
+
+            <Button
+                android:id="@+id/btn_base_read_meter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="baseRead"
+                android:background="@drawable/btn_bg2"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="0dp"
+                android:text="基站抄表" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

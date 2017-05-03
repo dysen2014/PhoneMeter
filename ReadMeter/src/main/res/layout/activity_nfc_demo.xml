@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/blg" >
+
+            <TextView
+                android:id="@+id/nfc_read_context"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:singleLine="false" />
+
+        <ImageView
+            android:id="@+id/nfc_img"
+            android:layout_width="240dp"
+            android:layout_height="320dp"/>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="正在扫描Mifare卡"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/Read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read Mifare Card"/>
+
+            <LinearLayout
+                android:id="@+id/ll_data"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Promt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:singleLine="false" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/SBLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/Sector"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:digits="1234567890"
+                    android:background="#00000000" />
+                <Spinner
+                    android:id="@+id/sSector"
+                    android:hint="Sector(0-15)"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:digits="1234567890"
+                    android:background="#3f3f3f"
+                    android:maxLength="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/Block"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:digits="1234567890"
+                    android:gravity="center"
+                    android:background="#00000000"/>
+                <Spinner
+                    android:id="@+id/sBlock"
+                    android:hint="Block(0-63)"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:digits="1234567890"
+                    android:entries="@array/block"
+                    android:background="#3f3f3f"
+                    android:maxLength="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/BlockCount"
+                    android:hint="Block(0-63)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:background="#00000000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <RadioGroup
+            android:id="@+id/RadioGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/SBLayout">
+
+            <RadioButton android:id="@+id/RadioBtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KeyA"
+                android:textColor="#000"
+                android:checked="true"/>
+            <RadioButton android:id="@+id/RadioBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="KeyB"
+                android:textColor="#000"/>
+        </RadioGroup>
+        <EditText
+            android:id="@+id/Key"
+            android:hint="Key(6位16进制数据)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RadioGrp"
+            android:digits="1234567890ABCDEF"
+            android:maxLength="12"
+            android:text="FFFFFFFFFFFF"/>
+        <EditText
+            android:id="@+id/meterId"
+            android:hint="表号"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Key"
+            android:digits="1234567890"
+            android:maxLength="32"/>
+        <EditText
+            android:id="@+id/Data"
+            android:hint="Data(16位16进制数据)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meterId"
+            android:digits="1234567890ABCDEF"
+            android:maxLength="32"/>
+    </RelativeLayout>
+
+            </LinearLayout>
+    <Button
+        android:id="@+id/Write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Write Mifare Card"/>
+        </LinearLayout>
+</ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/item_header"
+            layout="@layout/item_bottom" />
+    </LinearLayout>
+</LinearLayout>
